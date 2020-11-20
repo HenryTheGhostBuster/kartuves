@@ -1,0 +1,48 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background: #C9D6FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.word {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.word div {
+    color: #fff;
+    font-size: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90px;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    height: 100px;
+    text-transform: uppercase;
+}
+
+.progressBar {
+    width: 600px;
+    border: 2px solid #fff;
+    height: 30px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.progressBar .bar {
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    transition: width 0.3s;
+}
