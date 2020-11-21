@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kartuvės</title>
+        <link href="reset.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="script.js" defer></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartuvės</title>
-    <link href="reset.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
-
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <div class="word"></div>
-
-    <div class="progressBar">
-        <div class="bar"></div>
-    </div>
-
-    <div class="x">
-        <div class="y"></div>
-        <div class="z"></div>
-    </div>
-</body>
-
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap"  rel="stylesheet">
+    </head>
+    <body>
+        <div class='buttonWrapper'>
+            <button class="selected" id="easyButton">Lengva</button>
+            <button class="notSelected" id="mediumButton">Sunkiau</button>
+            <button class="notSelected" id="hardButton">Sunku</button>
+        </div>
+        <div class="word"></div>
+        <div class="progressBar">
+            <div class="bar"></div>
+        </div>
+        <!-- <audio id="shortBeep" src="sounds/short_beep.mp3"></audio>
+        <audio id="softBeep" src="sounds/soft_beep.mp3"></audio> -->
+        <div class="popup"></div>
+    </body>
 </html>

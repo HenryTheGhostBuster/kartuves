@@ -1,12 +1,60 @@
 body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    background: #C9D6FF;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(0,36,27);
+    background: linear-gradient(352deg, rgba(0,36,27,1) 0%, rgba(9,121,93,1) 35%, rgba(0,255,192,1) 100%);
+}
+
+.buttonWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.buttonWrapper button {
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 200ms;
+}
+
+.buttonWrapper button:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.notSelected {
+    border: 2px solid #fff;
+    box-shadow: 0 0 2px 3px rgba(34, 34, 34, 0.3);
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.notSelected:hover {
+    color: #757575;
+    border-color: #757575;
+}
+
+.notSelected:active {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+.selected {
+    color: #222;
+    background-color: #fff;
+    cursor: default;
+    border: none;
 }
 
 .word {
@@ -35,6 +83,8 @@ body {
     height: 30px;
     margin: auto;
     margin-top: 100px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .progressBar .bar {
@@ -43,6 +93,52 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 50%;
     transition: width 0.3s;
+}
+
+.popup {
+    width: 0;
+    margin: auto;
+    font-size: 0;
+    color: #222;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    height: 0;
+    
+    animation-name: slideOut, stretchOut, dropDown, dropDown, stretchOut, slideOut;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal, normal, normal, reverse, reverse, reverse;
+    animation-duration: 100ms, 200ms, 500ms, 500ms, 200ms, 100ms;
+    animation-delay: 0ms, 100ms, 300ms, 1800ms, 2300ms, 2500ms;
+
+    display: none;
+}
+
+@keyframes stretchOut {
+    0% { width: 0; }
+    100% { width: 600px; }
+}
+
+@keyframes dropDown {
+    0% {
+        height: 0;
+        font-size: 0;
+    }
+    50% {
+        font-size: 0;
+    }
+    100% {
+        height: 90px;
+        font-size: 50px;
+    }
+}
+
+@keyframes slideOut {
+    from { margin-top: 0; }
+    to { margin-top: 20px; }
 }
